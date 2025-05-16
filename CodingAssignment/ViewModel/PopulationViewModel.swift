@@ -80,7 +80,7 @@ class PopulationViewModel: ObservableObject{
         do {
             let populationEntities = try context.fetch(fetchRequest)
             
-            let populationList: [Population] = populationEntities.map {
+            var populationList: [Population] = populationEntities.map {
                 return Population(yearId: Int($0.yearId),
                                   idNation: $0.idNation ?? "",
                                   nation: $0.nation ?? "",
@@ -88,6 +88,8 @@ class PopulationViewModel: ObservableObject{
                                   population: Int($0.population),
                                   slugNation: $0.slugNation ?? "")
             }
+            
+            populationList.sort { $0.yearId > $1.yearId }
             
             return populationList
         } catch {

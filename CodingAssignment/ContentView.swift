@@ -10,7 +10,7 @@ struct ContentView: View {
             List {
                 ForEach(populationViewModel.data, id: \.yearId) { data in
                     NavigationLink {
-                        Text("\(data.nation) - \(data.population)")
+                        Text("\(data.nation) Population - \(data.population)")
                     } label: {
                         Text("\(data.year) - \(data.population)")
                     }
