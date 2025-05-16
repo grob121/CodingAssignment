@@ -1,10 +1,3 @@
-//
-//  CodingAssignmentApp.swift
-//  CodingAssignment
-//
-//  Created by Collabera on 5/16/25.
-//
-
 import SwiftUI
 
 @main

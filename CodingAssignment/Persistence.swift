@@ -1,10 +1,3 @@
-//
-//  Persistence.swift
-//  CodingAssignment
-//
-//  Created by Collabera on 5/16/25.
-//
-
 import CoreData
 
 struct PersistenceController {
